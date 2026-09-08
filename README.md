@@ -12,7 +12,7 @@ This project takes a messy, wide-format questionnaire export and turns it into a
 | **Focal brand**     | Cozy                                                          |
 | **Sample**          | 2,600 respondents · 2 waves (2024 n=1,300 / 2025 n=1,300)     |
 | **Tools**           | Python · Power BI                                             |
-| **Data model**      | Customer Experience Analytics · Operational Analytics         |
+| **Data model**      | Star schema - 2 dimension tables, 6 fact tables               |
 
 ---
 
