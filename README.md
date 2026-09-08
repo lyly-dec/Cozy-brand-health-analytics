@@ -68,4 +68,11 @@ The transformation process involved:
 - Loading the resulting tables into Power BI and building relationships between them in the data model
 
 
+## 📈 Dashboard
+<img width="509" height="309" alt="image" src="https://github.com/user-attachments/assets/98124f84-bac9-4ac4-ac27-eb10adb9a2af" />
+<img width="507" height="309" alt="image" src="https://github.com/user-attachments/assets/3346a975-4c36-47dd-ba65-e064ff7d82ce" />
+<img width="510" height="310" alt="image" src="https://github.com/user-attachments/assets/0db4ee0b-4b02-4df2-99db-0ad0d75f5085" />
+<img width="508" height="308" alt="image" src="https://github.com/user-attachments/assets/1042b51b-b581-4084-a4a0-e26d668ae8dd" />
+
+
 
