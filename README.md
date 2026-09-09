@@ -22,7 +22,7 @@ Cozy's awareness grew +4.8pp YoY (94.2% in 2025), yet BUMO sits at just 9.3%, ~2
 This project aims to answer:
 
 - Where does Cozy lose the most consumers along the funnel, and is it getting better or worse?
-- Why do consumers who already know Cozy still not choose it — product or brand perception? 
+- Why do consumers who already know Cozy still not choose it - product or brand perception? 
 - Does Cozy reach the right channels and occasions? 
 - Is Cozy's competitive position improving or declining, and against whom?
 
@@ -50,10 +50,15 @@ This project aims to answer:
 ---
 
 ## 🚀 Business Recommendations
-1. **Close the recall gap**: Sharpest drop is Awareness -> Spontaneous (94% -> 43%), partly due to 24% lower media reach per person than C2/Tea Plus.
--> Increase touchpoint frequency, not breadth.
-2. **Fix flavor**: it's the root lever, not just a taste problem. Consumers who dislike Cozy's flavor rate it lower across every image attribute (health, trust, refreshment, popularity), not just taste. Product reformulation here has the widest potential to lift brand image as a whole.
-3. **Protect Grocery Shop, and press the advantage against Tea Plus**: Cozy is behind C2 in its own biggest sales channel, Grocery Shop (60% vs 68%). C2 is also the brand that takes the most customers away from Cozy - these two facts might be connected. At the same time, Cozy is winning switchers from Tea Plus faster than any other brand (net +10 overall) - a signal worth reinforcing, not just defending against C2. Prioritize grocery-store visibility first, then double down on whatever is drawing Tea Plus users over.
+1. **Stop buying more reach**. More than half of the 94% who know Cozy aren't recalling it spontaneously. Audit which touchpoints are actually working, then raise frequency there
+
+2. **Fix the flavor first - everything else is a workaround**. It's the root cause dragging down brand image, not just a taste issue. Run blind taste tests against C2 and Tea Plus to pinpoint the exact gap, then pilot 1-2 reformulated variants in a limited market before a full rollout.
+
+3. **Hold Grocery Shop spend flat - it's not broken, just Cozy-sized**. The buyer gap vs C2 there is roughly in line with Cozy's overall gap - no special campaign to win it back, no pulling out either (still 60% of Cozy's volume). Cozy already leans ahead in Coffee shop and Supermarket - put the next dollar there and see if it scales, instead of chasing gaps everywhere at once.
+
+4. **Split the two switching problems - don't merge them**. Retaining buyers from C2 and pulling buyers from Tea Plus are different jobs: one needs a reason to stay, the other a reason to switch. Run a retention/loyalty offer for at-risk Cozy buyers now. For the Tea Plus side, the switcher base (n=36) is too small to profile reliably - start with a broad trial/sampling push at Tea Plus's own points of sale rather than a targeted campaign, and build a real profile once more switching data accumulates.
+---
+
 ##  📂 Dataset
 ### Data Source
 
@@ -72,7 +77,19 @@ The transformation process involved:
 - Standardizing common key columns (Serial number, Wave, Master Brand) across all tables so they could be connected later
 - Loading the resulting tables into Power BI and building relationships between them in the data model
 
+## 🧱 Data Model (Star Schema)
 
+### Dimensions
+- Dim Master Brand - 6 master brands, deduplicated from 55 raw SKU-level brands
+- Dim_Respondent - Serial number, Wave, Region, Gender, Age, Income, Occupation, Education
+### Facts (long-format, one row per respondent × brand × attribute, joined to Dim Master Brand)
+- Fact Funnel - Serial number, Wave, Master_Id, TOM, BUMO, P3M, Consideration, Total_Spontaneous, Total_aided_awareness, P4W, Previous_Master_Id, Previous_Master_Brand, Switch_Status
+- Fact Brand Image - Serial number, Master_Id, Attribute, Score
+- Fact Barriers - Barrier, Attribute, Barrier_Response, Master_Id, Serial number
+- Fact Media Channel - Master_Id, Media Channel, Serial number
+- Fact Occasion - Master_Id, Occasion, Serial number
+- Fact Purchased Channel - Master_Id, Purchased channel, Serial number
+---
 ## 📈 Dashboard
 <img width="509" height="309" alt="image" src="https://github.com/user-attachments/assets/98124f84-bac9-4ac4-ac27-eb10adb9a2af" />
 <img width="507" height="309" alt="image" src="https://github.com/user-attachments/assets/3346a975-4c36-47dd-ba65-e064ff7d82ce" />
