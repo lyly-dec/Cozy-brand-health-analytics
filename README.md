@@ -47,8 +47,13 @@ This project aims to answer:
 - Cozy gains the most switchers from Olong Tea Plus.
 - Cozy loses the most switchers to C2.
 - This points to two distinct strategic needs: offense against Tea Plus, defense against C2.
+---
 
-
+## 🚀 Business Recommendations
+1. **Close the recall gap**: Sharpest drop is Awareness -> Spontaneous (94% -> 43%), partly due to 24% lower media reach per person than C2/Tea Plus.
+-> Increase touchpoint frequency, not breadth.
+2. **Fix flavor**: it's the root lever, not just a taste problem. Consumers who dislike Cozy's flavor rate it lower across every image attribute (health, trust, refreshment, popularity), not just taste. Product reformulation here has the widest potential to lift brand image as a whole.
+3. **Protect Grocery Shop, and press the advantage against Tea Plus**: Cozy is behind C2 in its own biggest sales channel, Grocery Shop (60% vs 68%). C2 is also the brand that takes the most customers away from Cozy - these two facts might be connected. At the same time, Cozy is winning switchers from Tea Plus faster than any other brand (net +10 overall) - a signal worth reinforcing, not just defending against C2. Prioritize grocery-store visibility first, then double down on whatever is drawing Tea Plus users over.
 ##  📂 Dataset
 ### Data Source
 
