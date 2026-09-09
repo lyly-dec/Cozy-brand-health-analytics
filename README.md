@@ -33,16 +33,16 @@ This project aims to answer:
 - Cozy's BUMO edged up just 1.0pp to 9%, still trailing the category leader by ~20pp.
 - Cozy reaches 24% fewer channels per person than category leaders.
 
-## 🎨 Imagery & Barriers
+### 🎨 Imagery & Barriers
 - Flavor is the #1 reason people say no to Cozy.
 - Dislike of flavor and limited variety remain Cozy's key barriers, consistent across waves.
 - Refreshment imagery is Cozy's growth driver - up 4pp to 55% in 2025, the only attribute trending upward.
 - Cozy lags top competitors by 23–33pp across most attributes, relying heavily on "reliable brand" (56%) to close the gap.
 
-## 🛒 Channel & Occasion
+### 🛒 Channel & Occasion
 - C2 purchases are concentrated in Grocery Shop (68% of C2 buyers); Cozy is more evenly spread across channels (60% via Grocery Shop, but stronger relative presence in Coffee shops and Supermarkets).
 - Break-time is the leading occasion for both brands; Cozy and C2 show broadly similar occasion patterns, with C2 slightly ahead on "consumed outside" occasions.
-## 🔄 Switching Dynamics
+### 🔄 Switching Dynamics
 - Net switching is positive for Cozy, but driven by two opposite dynamics.
 - Cozy gains the most switchers from Olong Tea Plus.
 - Cozy loses the most switchers to C2.
