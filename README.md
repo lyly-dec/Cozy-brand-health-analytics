@@ -113,5 +113,25 @@ The transformation process involved:
 - **Developed DAX measures** including dynamic conditional formatting that auto-updates chart highlights as filters change.
 ---
 
-
+## 📁 Project Structure
+```text
+cozy-brand-health-analytics/
+│
+├── Cleaning data/
+│   └── Code Python.py              # Python (pandas) ETL: raw survey → clean star-schema tables
+│
+|
+├── data/
+│   ├── data_raw/                   # Original Excel survey export (Dataset, Brandlist, QNR reference)
+│   └── data_clean/                 # Transformed Dim/Fact CSV tables
+│
+|
+├── images/                         # Dashboard screenshots used in documentation
+│
+|
+├── Cozy_Brand_Health.pbix          # Power BI report (4 pages)
+|
+├── Cozy_Brand_Health.pdf           # Exported dashboard pages for quick preview
+|
+└── README.md                       # Project overview, methodology, insights, and dashboard showcase
 
