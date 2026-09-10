@@ -15,7 +15,6 @@ This project takes a messy, wide-format questionnaire export and turns it into a
 | **Data model**      | Star schema - 2 dimension tables, 6 fact tables               |
 
 ---
-
 ## 🎯 Business Context
 Cozy's awareness grew +4.8pp YoY (94.2% in 2025), yet BUMO sits at just 9.3%, ~20pp behind the category leader. This project investigates where that gap comes from and what to do about it. 
 
@@ -27,6 +26,39 @@ This project aims to answer:
 - Is Cozy's competitive position improving or declining, and against whom?
 
 --- 
+##  📂 Dataset
+### Data Source
+
+The original dataset is derived from a brand health survey conducted to measure consumers' awareness, consideration, usage, and perceptions of beverage brands.
+
+The raw survey data was provided in a wide-format structure, containing survey responses across a large number of questions and variables.
+### Data Transformation
+
+The raw survey dataset was transformed using Python (pandas) into a set of clean, business-oriented tables.
+The transformation process involved:
+
+- Reviewing the survey questionnaire and variable definitions
+- Mapping survey questions to relevant business concepts (funnel, imagery, barriers, occasion, channel, switching)
+- Restructuring the wide-format survey data into long-format analytical tables
+- Separating respondent, brand, and survey-related information into distinct tables
+- Standardizing common key columns (Serial number, Wave, Master Brand) across all tables so they could be connected later
+- Loading the resulting tables into Power BI and building relationships between them in the data model
+  
+---
+## 🧱 Data Model (Star Schema)
+
+### Dimensions
+- Dim Master Brand - 6 master brands, deduplicated from 55 raw SKU-level brands
+- Dim_Respondent - Serial number, Wave, Region, Gender, Age, Income, Occupation, Education
+### Facts (long-format, one row per respondent × brand × attribute, joined to Dim Master Brand)
+- Fact Funnel - Serial number, Wave, Master_Id, TOM, BUMO, P3M, Consideration, Total_Spontaneous, Total_aided_awareness, P4W, Previous_Master_Id, Previous_Master_Brand, Switch_Status
+- Fact Brand Image - Serial number, Master_Id, Attribute, Score
+- Fact Barriers - Barrier, Attribute, Barrier_Response, Master_Id, Serial number
+- Fact Media Channel - Master_Id, Media Channel, Serial number
+- Fact Occasion - Master_Id, Occasion, Serial number
+- Fact Purchased Channel - Master_Id, Purchased channel, Serial number
+---
+
 ## 💡 Key Insights
 ### 📉 Funnel Performance
 - Cozy trails across the entire funnel, with the sharpest drop between Awareness and Spontaneous Recall.
@@ -59,37 +91,8 @@ This project aims to answer:
 4. **Split the two switching problems - don't merge them**. Retaining buyers from C2 and pulling buyers from Tea Plus are different jobs: one needs a reason to stay, the other a reason to switch. Run a retention/loyalty offer for at-risk Cozy buyers now. For the Tea Plus side, the switcher base (n=36) is too small to profile reliably - start with a broad trial/sampling push at Tea Plus's own points of sale rather than a targeted campaign, and build a real profile once more switching data accumulates.
 ---
 
-##  📂 Dataset
-### Data Source
+## 🛠️ Technical Highlights
 
-The original dataset is derived from a brand health survey conducted to measure consumers' awareness, consideration, usage, and perceptions of beverage brands.
-
-The raw survey data was provided in a wide-format structure, containing survey responses across a large number of questions and variables.
-### Data Transformation
-
-The raw survey dataset was transformed using Python (pandas) into a set of clean, business-oriented tables.
-The transformation process involved:
-
-- Reviewing the survey questionnaire and variable definitions
-- Mapping survey questions to relevant business concepts (funnel, imagery, barriers, occasion, channel, switching)
-- Restructuring the wide-format survey data into long-format analytical tables
-- Separating respondent, brand, and survey-related information into distinct tables
-- Standardizing common key columns (Serial number, Wave, Master Brand) across all tables so they could be connected later
-- Loading the resulting tables into Power BI and building relationships between them in the data model
-
-## 🧱 Data Model (Star Schema)
-
-### Dimensions
-- Dim Master Brand - 6 master brands, deduplicated from 55 raw SKU-level brands
-- Dim_Respondent - Serial number, Wave, Region, Gender, Age, Income, Occupation, Education
-### Facts (long-format, one row per respondent × brand × attribute, joined to Dim Master Brand)
-- Fact Funnel - Serial number, Wave, Master_Id, TOM, BUMO, P3M, Consideration, Total_Spontaneous, Total_aided_awareness, P4W, Previous_Master_Id, Previous_Master_Brand, Switch_Status
-- Fact Brand Image - Serial number, Master_Id, Attribute, Score
-- Fact Barriers - Barrier, Attribute, Barrier_Response, Master_Id, Serial number
-- Fact Media Channel - Master_Id, Media Channel, Serial number
-- Fact Occasion - Master_Id, Occasion, Serial number
-- Fact Purchased Channel - Master_Id, Purchased channel, Serial number
----
 ## 📊 Dashboards
 
 <p align="center">
