@@ -91,8 +91,6 @@ The transformation process involved:
 4. **Split the two switching problems - don't merge them**. Retaining buyers from C2 and pulling buyers from Tea Plus are different jobs: one needs a reason to stay, the other a reason to switch. Run a retention/loyalty offer for at-risk Cozy buyers now. For the Tea Plus side, the switcher base (n=36) is too small to profile reliably - start with a broad trial/sampling push at Tea Plus's own points of sale rather than a targeted campaign, and build a real profile once more switching data accumulates.
 ---
 
-## 🛠️ Technical Highlights
-
 ## 📊 Dashboards
 
 <p align="center">
@@ -102,8 +100,18 @@ The transformation process involved:
   <br><br>
   <img src="images/page%203-%20Imagery%20%26%20Barriers.jpg" width="900" alt="Imagery and Barriers">
   <br><br>
-  <img src="images/page%204-%20Channel%20%26%20Switching%20Dynamics.jpg" width="900" alt="Channel and Switching Dynamics">
+<img src="images/page%204-%20Channel%20%26%20Switching%20Dynamics_page-0001%20.jpg" width="900" alt="Channel and Switching Dynamics">
 </p>
+
+## 🛠️ Technical Highlights
+- **Built an end-to-end analytics workflow** using Python and Power BI.
+  
+- **Designed a Python (pandas) data-transformation pipeline** to reshape a 1,068-column wide-format survey export, map 55 SKU-level products to 7 master brands, and generate reusable star-schema tables.
+  
+- **Built a multi-fact dimensional data model** spanning funnel (including brand-switching), brand image, purchase barriers, media touchpoints, purchase channels, and consumption occasions.
+  
+- **Developed DAX measures** including dynamic conditional formatting that auto-updates chart highlights as filters change.
+---
 
 
 
